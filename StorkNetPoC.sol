@@ -63,6 +63,15 @@ contract StorkData {
         }
     }
 
+    //made the aboe an array and then badabing badaboom its perfect now (test this) 
+    function findMaxEncode_PreDecode_ARRAY(DataStruct[] calldata data) public {
+        for(uint8 i = 1; i<data.length; ++i){
+            if(data[i].y > max){
+                max = data[i].y;
+            }
+        }
+    }
+
     // gas for execution [+decode]
     // size 1 45940 
     // size 2 28728 
